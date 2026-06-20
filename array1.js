@@ -3,6 +3,10 @@ const arr1 = [1, 2, 3, 4, 5]
 const result1 = arr1.reduce((item, sum) => sum + item)
 console.log("total sum result :", result1)
 
+// reverse array
+const rev = arr1.reverse()
+console.log('reverse :', rev)
+
 // 2.lergest,small number in array
 const arr2 = [5, 10, 25, 8];
 const large = arr2.sort((a, b) => b - a)
@@ -114,7 +118,7 @@ console.log("odd number :", odd)
 // 10 print all element
 const arr = [10, 20, 30, 40, 50];
 
-for(i = 0 ; i < arr.length; i++){
+for (i = 0; i < arr.length; i++) {
     console.log(arr[i])
 }
 
@@ -124,9 +128,9 @@ const srt = 'javascript';
 const vowel = 'aeiou'
 let cont = 0;
 
-for(let char of srt){
+for (let char of srt) {
     if (vowel.includes(char)) {
-        cont ++
+        cont++
     }
     console.log(cont)
 }
@@ -134,17 +138,62 @@ for(let char of srt){
 // 12 capital the first letter
 const name = 'chandru'
 
-const cap1 = name.charAt(0).toUpperCase()+ name.slice(1)
+const cap1 = name.charAt(0).toUpperCase() + name.slice(1)
 console.log(cap1)
 
 
 // 13. merge two arrays
-const ar1 = [1,2,3]
-const ar2 = [4,5,6]
+const ar1 = [1, 2, 3]
+const ar2 = [4, 5, 6]
 // method one spred operater
-const arr8_1 = [...ar1,...ar2]
+const arr8_1 = [...ar1, ...ar2]
 console.log(arr8_1)
 
 // method 2 concat
 const arr8_2 = ar1.concat(ar2)
 console.log(arr8_2)
+
+
+// get only names
+const users1 = [
+    { name: "John" },
+    { name: "Mike" }
+];
+
+const names = users1.map(user => user.name)
+console.log(names)
+
+// get obj key and values only
+const user1 = {
+    name: "Chandru",
+    age: 22
+};
+
+// keys only
+console.log('obj keys :', Object.keys(user1))
+console.log('obj values :', Object.values(user1))
+
+// above 18 age
+const users2 = [
+    { name: "A", age: 15 },
+    { name: "B", age: 25 },
+    { name: "C", age: 30 }
+]
+
+const age_18 = users2.filter(item => item.age > 18)
+console.log('age 18 + :', age_18)
+
+// add new property
+let user2 = { name: "John" }
+
+const new_property = { ...user2, role: "developer" }
+console.log('new property :', new_property);
+
+// sort user by age 
+const users3 = [
+    { name: "ck", age: 30 },
+    { name: "chandru", age: 20 }
+]
+
+const sort_age = users3.sort((a,b) => a.age - b.age)
+console.log('sort by name',sort_age);
