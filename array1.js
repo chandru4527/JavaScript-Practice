@@ -132,8 +132,8 @@ for (let char of srt) {
     if (vowel.includes(char)) {
         cont++
     }
-    console.log(cont)
 }
+console.log('vowels :', cont)
 
 // 12 capital the first letter
 const name = 'chandru'
@@ -195,28 +195,28 @@ const users3 = [
     { name: "chandru", age: 20 }
 ]
 
-const sort_age = users3.sort((a,b) => a.age - b.age)
-console.log('sort by age',sort_age);
+const sort_age = users3.sort((a, b) => a.age - b.age)
+console.log('sort by age', sort_age);
 
 // find most repeated word
-const frt = ["apple","banana","apple","apple"]
+const frt = ["apple", "banana", "apple", "apple"]
 
-const maxfrt =frt.filter(item => frt.indexOf(item) !== frt.lastIndexOf(item))
-console.log('max frt and count :',maxfrt[0],maxfrt.length);
+const maxfrt = frt.filter(item => frt.indexOf(item) !== frt.lastIndexOf(item))
+console.log('max frt and count :', maxfrt[0], maxfrt.length);
 
 
 // group of user by age 
 const users4 = [
- {name:"A",age:20},
- {name:"B",age:20},
- {name:"C",age:25}
+    { name: "A", age: 20 },
+    { name: "B", age: 20 },
+    { name: "C", age: 25 }
 ]
 
 let age20 = []
 let age25 = []
 
 users4.forEach(item => {
-    if(item.age === 20)
+    if (item.age === 20)
         age20.push(item)
 
     if (item.age === 25) {
@@ -224,8 +224,25 @@ users4.forEach(item => {
     }
 })
 
-console.log('age 20 :',age20, 'age 25 :', age25)
+console.log('age 20 :', age20, 'age 25 :', age25)
 // method 2
-const grouped = Object.groupBy(users4,user => user.age)
+const grouped = Object.groupBy(users4, user => user.age)
 
 console.log(grouped)
+
+// arry make empty
+const arr9 = [1, 2, 3]
+delete arr9[2]
+arr9.push(4)
+console.log(arr9, "length", arr9.length)
+
+
+// what is the output
+const arr10 = [10, 20, 30]
+
+arr10[1] = arr10[2]
+arr10.push(40)
+
+arr10[0] = arr10[0] + 5
+
+console.log(arr10)
