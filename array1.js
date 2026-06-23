@@ -234,7 +234,7 @@ console.log(grouped)
 const arr9 = [1, 2, 3]
 delete arr9[2]
 arr9.push(4)
-console.log(arr9, "length", arr9.length)
+console.log(arr9, "length", arr9.length)   // [1,2,empty,40]
 
 
 // what is the output
@@ -242,7 +242,17 @@ const arr10 = [10, 20, 30]
 
 arr10[1] = arr10[2]
 arr10.push(40)
-
 arr10[0] = arr10[0] + 5
 
 console.log(arr10)
+
+
+// event loop
+console.log('start')
+
+setTimeout(() =>{
+    console.log('middle')
+},0)
+
+
+console.log('end')
