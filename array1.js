@@ -244,15 +244,51 @@ arr10[1] = arr10[2]
 arr10.push(40)
 arr10[0] = arr10[0] + 5
 
-console.log(arr10)
+console.log(arr10)   // [15,30,30,40]
 
 
-// event loop
+// ===== event loop =====
 console.log('start')
 
-setTimeout(() =>{
-    console.log('middle')
-},0)
-
+// setTimeout(() => {
+//     console.log('middle')
+// }, 0)
 
 console.log('end')
+
+
+// remove stars in string
+const srt2 = 'g**gle'
+const ar = srt2.split('')
+console.log(ar.filter(item => item !== "*").join(''));
+
+// move all zeros to end
+const arr11 = [4,0,2,0,3,0,7,0,0]
+
+const zeros = []
+const nonzeros = []
+
+for(num of arr11){
+
+    if(num === 0){
+        zeros.push(num)
+    }else{
+        nonzeros.push(num)
+    }
+}
+
+const newarr = [...nonzeros,...zeros]
+
+console.log(newarr)
+
+
+
+
+
+
+
+
+
+
+
+
