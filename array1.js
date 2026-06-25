@@ -296,19 +296,18 @@ console.log(newobj);
 
 
 // move all negative number
-const arr12 = [-1, 0, 2, 3, -2, -3];
+const arr12 = [-1, 0, 2, -4, 3, -2, -3, 1];
 
 const lesszero = []
 const greatzero = []
 
 for (num of arr12) {
-    if (num < 0) {
-        lesszero.push(num)
-    } else {
-        greatzero.push(num)
-    }
+
+    // single line
+    num < 0 ? lesszero.push(num) : greatzero.push(num)
+
 }
-const newalign = [...greatzero, ...lesszero]
+const newalign = [...greatzero.sort(), ...lesszero.sort()]
 
 console.log(lesszero)
 console.log(greatzero)
