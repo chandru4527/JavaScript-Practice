@@ -263,32 +263,56 @@ const ar = srt2.split('')
 console.log(ar.filter(item => item !== "*").join(''));
 
 // move all zeros to end
-const arr11 = [4,0,2,0,3,0,7,0,0]
+const arr11 = [4, 0, 2, 0, 3, 0, 7, 0, 0]
 
 const zeros = []
 const nonzeros = []
 
-for(num of arr11){
+for (num of arr11) {
 
-    if(num === 0){
+    if (num === 0) {
         zeros.push(num)
-    }else{
+    } else {
         nonzeros.push(num)
     }
 }
 
-const newarr = [...nonzeros,...zeros]
+const newarr = [...nonzeros, ...zeros]
 
 console.log(newarr)
 
+// obj to arr 
+const obj = {
+    name: "Chandru",
+    age: 22
+}
+
+const newar = Object.entries(obj)
+console.log(newar);
+
+// arry to obj 
+const newobj = Object.fromEntries(newar)
+console.log(newobj);
 
 
+// move all negative number
+const arr12 = [-1, 0, 2, 3, -2, -3];
 
+const lesszero = []
+const greatzero = []
 
+for (num of arr12) {
+    if (num < 0) {
+        lesszero.push(num)
+    } else {
+        greatzero.push(num)
+    }
+}
+const newalign = [...greatzero, ...lesszero]
 
-
-
-
+console.log(lesszero)
+console.log(greatzero)
+console.log(newalign)
 
 
 
