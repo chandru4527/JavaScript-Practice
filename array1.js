@@ -352,5 +352,5 @@ let i2 = ''
 let i3 = 0
 let i4 = i2 + i3
 console.log("data type :", typeof i4, i4)
-
+console.log(i2 === i3)
 
