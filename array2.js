@@ -51,7 +51,7 @@ const students = [
         active: false,
     },
 ];
-//1. map methods
+//1. map methods give the array of elements after performing the operation on each element and return the array of elements
 
 // i.Get all student names.
 const stdname = students.map(std => std.name)
@@ -76,7 +76,7 @@ const passed_status = students.map(std => {
 })
 console.log("5.stds with passed :" , passed_status)
 
-//2. filter method
+//2. filter method give the array of elements which satisfy the condition and return the array of elements
 
 // vi.Students with attendance above 90.
 const h_ats = students.filter(std => std.attendance > 90)
@@ -98,7 +98,7 @@ console.log('9.cse stds :',cse_std)
 const aged20_std = students.filter(std => std.age >= 20)
 console.log('10.aged 20 stds :',aged20_std)
 
-// find method
+// find method   check the first element which satisfy the condition give the value of that element
 //xi.Find student with id 3.
 const std3 = students.find(std => std.id === 3)
 console.log('std id  3', std3)
@@ -115,3 +115,15 @@ console.log('first inactive std',inactive_std)
 const std_below70_ats= students.find(std => std.attendance <70)
 console.log('first std below 70 ats',std_below70_ats)
 
+// some method check if any element satisfy the condition give value true or false
+// xv.Is any student absent below 60 attendance?
+const std_below60_ats = students.some(std => std.attendance < 60)
+console.log('any std below 60 ats',std_below60_ats)
+
+// xvi.Is anyone scoring above 95 average?
+const std_above95_avg = students.some(std => std.marks.reduce((acc,mark) => acc + mark ,0)/ std.marks.length > 95)
+console.log('any std above 95 avg',std_above95_avg)
+
+// xvii.Is there any IT student?
+const std_IT = students.some(std => std.department === 'IT')
+console.log('any std in IT dept',std_IT)
