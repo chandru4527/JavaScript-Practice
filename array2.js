@@ -97,3 +97,21 @@ console.log('9.cse stds :',cse_std)
 // x.Students aged above 20.
 const aged20_std = students.filter(std => std.age >= 20)
 console.log('10.aged 20 stds :',aged20_std)
+
+// find method
+//xi.Find student with id 3.
+const std3 = students.find(std => std.id === 3)
+console.log('std id  3', std3)
+
+// xii.Find student named "Priya".
+const std_priya = students.find(std => std.name === 'Priya')
+console.log('std name priya',std_priya)
+
+// xiii.Find first inactive student.
+const inactive_std = students.find(std => !std.active)
+console.log('first inactive std',inactive_std)
+
+// xiv.Find first student with attendance below 70.
+const std_below70_ats= students.find(std => std.attendance <70)
+console.log('first std below 70 ats',std_below70_ats)
+
