@@ -218,3 +218,15 @@ const sort_by_highest_scorer = students.sort((a,b) => {
 })
 console.log('sort by highest scorer :', sort_by_highest_scorer)
 
+// forEach method perform the operation on each element and return undefined
+// Print student names.
+const print_std_names = students.forEach(std => console.log('std name :', std.name))
+
+// Print student details.
+const print_std_details = students.forEach(std => console.log(`${std.name} - ${std.attendance}%`))
+
+// Print average of every student.
+const print_std_avg = students.forEach(std => {
+    const avg = std.marks.reduce((acc, mark) => acc + mark, 0) / std.marks.length
+    console.log(`${std.name} - Average Marks: ${Math.floor(avg)}`)
+}   )
