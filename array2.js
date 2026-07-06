@@ -189,5 +189,32 @@ const low_average_std = students.reduce((acc,std) =>  {
 },{})
 console.log('lowest average student:', low_average_std)
 
+// sort method sort the array of elements based on the condition and return the array of elements
+// Sort by age.
+const sort_by_age = students.sort((a,b) => a.age - b.age)
+console.log('sort by age :', sort_by_age)
 
+// Sort by attendance.
+const sort_by_ats = students.sort((a,b) => a.attendance - b.attendance)
+console.log('sort by ats :', sort_by_ats)
+
+// Sort alphabetically.
+const sort_by_name = students.sort((a,b) => a.name.localeCompare(b.name))   
+console.log('sort by name :', sort_by_name)
+
+// Sort by average marks.
+const sort_by_avg_marks = students.sort((a,b) => {
+    const avgA = a.marks.reduce((acc, mark) => acc + mark, 0) / a.marks.length
+    const avgB = b.marks.reduce((acc, mark) => acc + mark, 0) / b.marks.length
+    return avgA - avgB
+})
+console.log('sort by avg marks :', sort_by_avg_marks)
+
+// Highest scorer first.
+const sort_by_highest_scorer = students.sort((a,b) => {
+    const totalA = a.marks.reduce((acc, mark) => acc + mark, 0)
+    const totalB = b.marks.reduce((acc, mark) => acc + mark, 0)
+    return totalB - totalA
+})
+console.log('sort by highest scorer :', sort_by_highest_scorer)
 
