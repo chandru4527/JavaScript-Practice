@@ -230,3 +230,8 @@ const print_std_avg = students.forEach(std => {
     const avg = std.marks.reduce((acc, mark) => acc + mark, 0) / std.marks.length
     console.log(`${std.name} - Average Marks: ${Math.floor(avg)}`)
 }   )
+
+// Get names of students whose attendance >90.
+const atts_90_name = students.filter(std => std.attendance > 90).map(std => std.name)
+console.log('atts 90 names',atts_90_name)
+
