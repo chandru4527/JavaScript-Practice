@@ -354,3 +354,85 @@ let i4 = i2 + i3
 console.log("data type :", typeof i4, i4)
 console.log(i2 === i3)
 
+// task 1
+const hello = (name) => {
+    return `hello ${name}!`
+}
+console.log('1 task :', hello(`chandru`));
+// =============================================
+
+// task 2
+const a = (name) => {
+    return `hello ${name}!`
+}
+console.log('2 task :', a('a'));
+
+const b = (name) => {
+    return `hello ${name}!`
+}
+console.log('2 task :', a('b'));
+//  ===============================================
+
+// task 3
+const greet = (name) => {
+    return name + "!"
+}
+let salutation = greet('chandru')
+console.log('3 task :', salutation);
+// ================================================
+
+// task 4
+let echo = (name) => {
+    return name
+}
+console.log('4 task :', echo('SkillSafari'));
+console.log('4 task :', echo('EduKeys'));
+// ==================================================
+
+// task 5
+let greet2 = (name) => {
+    return `hello ${name}!`
+}
+console.log('5 task :', greet2('SkillSafari'));
+//  =================================================
+
+// task 6
+let log = (name) => {
+    return console.log(`6 task :`, name);
+}
+// console.log(log('hello skillsafari'));
+log('hello skillsafari')
+// =================================================
+
+// task 7
+const shout = (name) => {
+    return console.log('7 task :', name + name);
+}
+shout('Hello')
+// ================================================
+
+// task 8 
+const length = (str) => {
+    return str.length
+}
+console.log('8 task :', length('hello'));
+// ================================================
+
+// task 9 
+const toCase = (str) => {
+    return str.toLowerCase() + '-' + str.toUpperCase()
+}
+console.log('9 task :', toCase('hello'));
+//  ===============================================
+
+// task 10 
+const shortCut = (str1, str2) => {
+    return str1[0] + str2[0]
+}
+console.log('10 task :', shortCut('Java', 'Script'));
+// ================================================
+
+
+
+
+
