@@ -432,6 +432,88 @@ const shortCut = (str1, str2) => {
 console.log('10 task :', shortCut('Java', 'Script'));
 // ================================================
 
+// task 11
+const firshChart = (name) => {
+    return name.trim()[0]
+}
+console.log('11 task :', firshChart('ChandruKumar'));
+//  =================================================
+
+// task 12 
+const indexOfignore = (str1, str2) => {
+    let sub1 = str1.toLowerCase()
+    let sub2 = str2.toLowerCase()
+    return sub1.indexOf(sub2)
+}
+console.log('12 taks :', indexOfignore('skill', 'KILL'));
+// ====================================================
+
+// task 13
+const secondIndexof = (str1, str2) => {
+    let sub1 = str1.toLowerCase().indexOf(str2)
+     if (sub1 === -1) {
+        return -1
+     }
+    let sub2 = str1.indexOf(str2, 3) 
+     return sub2
+}
+console.log('13 task :', secondIndexof('White Rabbit', 'it'));
+//  ================================================ 
+
+// task 14
+const firstWord = (str) => {
+    return str.split(' ')[0]
+}
+console.log('14 task :', firstWord('skill and safari'));
+// =================================================
+
+// task 15
+const normalize = (srt) => {
+
+    return srt.replaceAll('-', '/')
+}
+console.log('15 task :', normalize('15-07-2021'));
+// ====================================
+
+// task 16
+const add = (a, b) => a + b
+console.log('16 task :', add(1, 2));
+// ======================================
+
+// task 17
+const toFahrenheit = (temp) => {
+    const fahrenheit = 32
+    let cel = temp * fahrenheit
+    return cel === 0 ? 32 : cel
+}
+
+console.log('17 task :', toFahrenheit(0));
+// =================================
+
+// task 18 
+const mean = (a, b) => {
+    const num = [a, b]
+    return num.reduce((acc, i) => acc + i, 0) / num.length
+}
+console.log('18 task :', mean(1, 2));
+// =======================================
+
+// task 19 
+const hypotenuse = (a, b) => {
+    return (a * a + b * b) / 5
+}
+console.log('19 task :', hypotenuse(3, 4));
+// ================================
+
+// task 20
+
+const midrange = (a, b, c) => {
+    let max = Math.max(a, b, c)
+    let min = Math.min(a, b, c)
+    return (max + min) / 2
+}
+console.log('20 task :', midrange(3, 9, 1));
+// =================================
 
 
 
