@@ -362,15 +362,15 @@ console.log('1 task :', hello(`chandru`));
 // =============================================
 
 // task 2
-const a = (name) => {
+const a1 = (name) => {
     return `hello ${name}!`
 }
-console.log('2 task :', a('a'));
+console.log('2 task :', a1('a'));
 
-const b = (name) => {
+const b1 = (name) => {
     return `hello ${name}!`
 }
-console.log('2 task :', a('b'));
+console.log('2 task :', b1('b'));
 //  ===============================================
 
 // task 3
@@ -451,11 +451,11 @@ console.log('12 taks :', indexOfignore('skill', 'KILL'));
 // task 13
 const secondIndexof = (str1, str2) => {
     let sub1 = str1.toLowerCase().indexOf(str2)
-     if (sub1 === -1) {
+    if (sub1 === -1) {
         return -1
-     }
-    let sub2 = str1.indexOf(str2, 3) 
-     return sub2
+    }
+    let sub2 = str1.indexOf(str2, 3)
+    return sub2
 }
 console.log('13 task :', secondIndexof('White Rabbit', 'it'));
 //  ================================================ 
@@ -514,6 +514,93 @@ const midrange = (a, b, c) => {
 }
 console.log('20 task :', midrange(3, 9, 1));
 // =================================
+
+// task 21
+const dice = () => {
+    return Math.floor(Math.random() * 6 + 1)
+}
+console.log('21 task :', dice());
+// ===========================
+
+// task 22
+const add2 = (str) => {
+    const num = str.split('+')
+    return (Number(num[0]) + Number(num[1]))
+}
+console.log('22 task :', add2('102+17'));
+// =====================================
+
+// task 23
+const nand = (a, b) => {
+    return !(a && b)
+}
+console.log('23 task :', nand(true, true));
+// ===============================
+
+// task 24
+const isEven = (a) => {
+    return a % 2 === 0 ? true : false
+}
+console.log('24 task :', isEven(2));
+// ===============================
+
+// task 25 
+const unequal = (a, b, c) => {
+    return a !== b && b !== c && c !== a ? true : false
+}
+console.log('25 task :', unequal(1, 1, 2));
+// ========================================
+
+// task 26
+const isThreeDigit = (num) => {
+    return num >= 100 && num < 1000 ? true : false
+}
+console.log('26 task :', isThreeDigit(500));
+// ====================================
+
+// task 27 
+const equals = (a, b) => {
+    return a !== b ? 'unequal' : 'equal'
+}
+console.log('27 task :', equals(1, 1));
+// =================================
+
+// task 28
+const repdigit = (num) => {
+    let n = String(num).split('')
+    return n[0] !== n[1] ? 'noRepdigit' : 'Repdigit'
+}
+console.log('28 task :', repdigit(23));
+// ==================================
+
+// task 29
+const addWithSurcharge = (a, b) => {
+    let n = []
+    let num = [a, b].map((item) => {
+        if (item <= 10) {
+            n.push(item + 1)
+        } else {
+            n.push(item + 2)
+        }
+    })
+    return n.reduce((acc, i) => acc + i, 0)
+}
+console.log('29 task :', addWithSurcharge(5, 15));
+// ===============================
+
+// task 30
+const sumMultiples = (num) => {
+    let nums = []
+
+    for (let i = 1; i < num; i++) {
+
+        if (i % 3 === 0 || i % 5 === 0) {
+            nums.push(i)
+        }
+    }
+    return nums.reduce((acc, item) => acc + item, 0)
+}
+console.log('30 task :', sumMultiples(20));
 
 
 
